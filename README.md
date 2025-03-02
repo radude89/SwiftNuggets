@@ -6,6 +6,11 @@
 
 Hi, I'm Radu, your guide to everything Swift! In this podcast, we dive into the latest Swift proposals, explore new language features, and uncover tips to level up your coding skills. Whether you're a seasoned developer or just getting started, Swift Nuggets will keep you informed and ahead of the curve.
 
+🎧 **Listen now**
+- [YouTube](https://youtu.be/1y3vhQt7kEI?si=WDepBNEcFdl6DdS0)
+- [Apple Podcasts](https://podcasts.apple.com/us/podcast/swift-nuggets/id1799279992)
+- [Spotify](https://open.spotify.com/episode/0AAHerBKVBo0AkDLL0IfKC?si=FUGM3p-gSj2G792ePXxabw)
+
 🚀 **Let's explore Swift, one nugget at a time!**
 
 This repository contains links, code snippets, and resources featured in the "Swift Nuggets" podcast episodes.
