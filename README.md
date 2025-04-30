@@ -32,7 +32,7 @@ This repository contains links, code snippets, and resources featured in the "Sw
 
 #### 🍔 What is new in Swift 6.2
 
-**Presented already in Episode 1 👇**
+**Presented as well in Episode 1 👇**
 
 - [SE-0446 - Nonescapable Types](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0446-non-escapable.md)
 - [SE-0447 - Span: Safe Access to Contiguous Storage](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0447-span-access-shared-contiguous-storage.md)
@@ -41,7 +41,7 @@ This repository contains links, code snippets, and resources featured in the "Sw
 - [SE-0453 - InlineArray, a fixed-size array](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0453-vector.md)
 - [SE-0458 - Opt-in Strict Memory Safety Checking](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0458-strict-memory-safety.md)
 
-**Presented in this episode 👇**
+**Presented in Episode 2 👇**
 - [SE-0462 - Task Priority Escalation APIs](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0462-task-priority-escalation-apis.md)
 - [SE-0463 Import Objective-C completion handler parameters as @Sendable](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0463-sendable-completion-handlers.md)
 - [SE-0466 Control default actor isolation inference](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0466-control-default-actor-isolation.md)

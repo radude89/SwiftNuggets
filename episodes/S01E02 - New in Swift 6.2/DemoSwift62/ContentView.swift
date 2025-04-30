@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+struct Greeting: ~Copyable {
+    var sayHelloVar: String
+}
+
+struct GreetingNonEscapable: ~Escapable {
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
@@ -16,6 +23,13 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+    }
+
+    func sayHello() {
+        let greeting = Greeting(sayHelloVar: "Hello!")
+        var anotherGreeting = greeting
+        print(anotherGreeting.sayHelloVar)
+        // print(greeting.sayHelloVar) -> ERROR
     }
 }
 
