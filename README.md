@@ -16,19 +16,67 @@ Hi, I'm Radu, your guide to everything Swift! In this podcast, we dive into the 
 
 This repository contains links, code snippets, and resources featured in the "Swift Nuggets" podcast episodes.
 
-## Episodes
-
-### ⭐️ Episode #2 - April, 2025 - What's new in Swift 6.2? Future swift proposals
-
 #### 🖇️ Resources
 
+- [📝 Episode #1 Playground](episodes/S01E01%20-%20New%20in%20Swift%206.1/)
 - [📝 Episode #2 Playground](episodes/S01E02%20-%20New%20in%20Swift%206.2/)
+- [📝 Episode #3 Playground](episodes/S01E03%20-%20New%20in%20Swift%206.2/)
+- [Xcode 16.3 beta 1](https://developer.apple.com/documentation/xcode-release-notes/xcode-16_3-release-notes)
 - [Xcode 16.3](https://developer.apple.com/documentation/xcode-release-notes/xcode-16_3-release-notes)
+- [Xcode 16.4](https://developer.apple.com/documentation/xcode-release-notes/xcode-16_4-release-notes)
 - [Swift Evolution Repo](https://github.com/swiftlang/swift-evolution)
 - [Swift Changelog](https://github.com/swiftlang/swift/blob/main/CHANGELOG.md)
+- [Swift 6.1 Release Process](https://forums.swift.org/t/swift-6-1-release-process/75442)
 - [Swift 6.2 Release Process](https://forums.swift.org/t/swift-6-2-release-process/78371)
 - [Swift Language focus areas heading into 2025](https://forums.swift.org/t/swift-language-focus-areas-heading-into-2025/76611/1)
 - [Swift Evolution Process](https://github.com/swiftlang/swift-evolution/blob/main/process.md)
+
+
+## Episodes
+
+<details>
+<summary>
+
+### ⭐️ Episode #3 - May, 2025 - What's new in Swift 6.2? Future Swift proposals
+
+</summary>
+
+#### 🍔 What is new in Swift 6.2
+
+**Presented as well in previous episodes 👇**
+
+- [SE-0461 - Run nonisolated async functions on the caller's actor by default](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0461-async-function-isolation.md)
+- [SE-0446 - Nonescapable Types](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0446-non-escapable.md)
+
+**Presented in Episode 3 👇**
+
+- [SE-0457 - Expose attosecond representation of Duration](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0457-duration-attosecond-represenation.md)
+- [SE-0371 - Isolated synchronous deinit](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0371-isolated-synchronous-deinit.md)
+
+#### 🐹 Future Swift proposals
+
+- [SE-0419 - Swift Backtracing API](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0419-backtrace-api.md)
+- [SE-0288 - Adding isPower(of:) to BinaryInteger](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0288-binaryinteger-ispower.md)
+- [SE-0246 - Generic math(s) functions](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0246-mathable.md)
+- [SE-0283 - Tuples Conform to Equatable, Comparable, and Hashable](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0283-tuples-are-equatable-comparable-hashable.md)
+- [SE-0321 - Package Registry Publish](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0321-package-registry-publish.md)
+- [SE-0342 - Static linking of runtime libraries by default on supported platforms](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0342-static-link-runtime-libraries-by-default-on-supported-platforms.md)
+- [SE-0454 - Memory allocator](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0454-memory-allocator.md)
+- [SE-0471 - SerialExecutor.isIsolated](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0471-SerialExecutor-isIsolated.md)
+- [SE-0476 - ABI attribute](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0476-abi-attr.md)
+- [SE-0477 - Default interpolation values](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0477-default-interpolation-values.md)
+- [SE-0481 - Weak let](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0481-weak-let.md)
+- [SE-0482 - Binary Static Library Dependencies](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0482-swiftpm-static-library-binary-target-non-apple-platforms.md)
+- [SE-0484 - Allow Additional Arguments to @dynamicMemberLookup Subscripts](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0484-allow-additional-args-to-dynamicmemberlookup-subscripts.md)
+
+</details>
+
+<details>
+<summary>
+
+### ⭐️ Episode #2 - April, 2025 - What's new in Swift 6.2? Future Swift proposals
+
+</summary>
 
 #### 🍔 What is new in Swift 6.2
 
@@ -42,6 +90,7 @@ This repository contains links, code snippets, and resources featured in the "Sw
 - [SE-0458 - Opt-in Strict Memory Safety Checking](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0458-strict-memory-safety.md)
 
 **Presented in Episode 2 👇**
+
 - [SE-0462 - Task Priority Escalation APIs](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0462-task-priority-escalation-apis.md)
 - [SE-0463 Import Objective-C completion handler parameters as @Sendable](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0463-sendable-completion-handlers.md)
 - [SE-0466 Control default actor isolation inference](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0466-control-default-actor-isolation.md)
@@ -58,17 +107,14 @@ This repository contains links, code snippets, and resources featured in the "Sw
 - [SE-0468 - Hashable conformance for Async(Throwing)Stream.Continuation](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0468-async-stream-continuation-hashable-conformance.md)
 - [SE-0473 - Clock Epochs](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0473-clock-epochs.md)
 
+</details>
+
+<details>
+<summary>
+
 ### ⭐️ Episode #1 - March, 2025 - What's new in Swift 6.1? Future Swift proposals
 
-#### 🖇️ Resources
-
-- [📝 Episode #1 Playground](episodes/S01E01%20-%20New%20in%20Swift%206.1/)
-- [Xcode 16.3 beta 1](https://developer.apple.com/documentation/xcode-release-notes/xcode-16_3-release-notes)
-- [Swift Evolution Repo](https://github.com/swiftlang/swift-evolution)
-- [Swift Changelog](https://github.com/swiftlang/swift/blob/main/CHANGELOG.md)
-- [Swift 6.1 Release Process](https://forums.swift.org/t/swift-6-1-release-process/75442)
-- [Swift Language focus areas heading into 2025](https://forums.swift.org/t/swift-language-focus-areas-heading-into-2025/76611/1)
-- [Swift Evolution Process](https://github.com/swiftlang/swift-evolution/blob/main/process.md)
+</summary>
 
 #### 🍔 What is new in Swift 6.1
 
@@ -96,6 +142,8 @@ This repository contains links, code snippets, and resources featured in the "Sw
 #### 🕣 Reminder about Noncopyable
 
 - [Article on whatsnewinswift.com about Noncopyable structs and enums](https://www.whatsnewinswift.com/?from=5.7&to=6.0#noncopyable-structs-and-enums)
+
+</details>
 
 ## 🎵 Music Credits
 

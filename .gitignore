@@ -5,6 +5,10 @@
 ## User settings
 xcuserdata/
 
+## Custom
+text-scripts/
+.cursor/
+
 ## Obj-C/Swift specific
 *.hmap
 
