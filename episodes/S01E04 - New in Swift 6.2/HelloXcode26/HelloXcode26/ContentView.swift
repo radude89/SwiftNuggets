@@ -22,6 +22,9 @@ struct ContentView: View {
     private func runPlaygroundOnAppear() {
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0371-isolated-synchronous-deinit.md
         executeIsolatedDeinitPlayground()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0446-non-escapable.md
+        executeNotEscapablePlayground()
     }
 }
 
