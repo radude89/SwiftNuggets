@@ -28,7 +28,10 @@ For episodes with Package.swift (like Episode 1):
 For episodes with .xcodeproj files (Episodes 2, 3, & 4):
 - Build: `xcodebuild -project [ProjectName].xcodeproj -scheme [SchemeName] build`
 - Open in Xcode: `open [ProjectName].xcodeproj`
-- Example for Episode 4: `open "episodes/S01E04 - New in Swift 6.2/HelloXcode26/HelloXcode26.xcodeproj"`
+- Specific examples:
+  - Episode 2: `open "episodes/S01E02 - New in Swift 6.2/DemoSwift62.xcodeproj"`
+  - Episode 3: `open "episodes/S01E03 - New in Swift 6.2/DemoSwift62-part2.xcodeproj"`
+  - Episode 4: `open "episodes/S01E04 - New in Swift 6.2/HelloXcode26/HelloXcode26.xcodeproj"`
 
 ## Code Architecture
 
@@ -41,10 +44,12 @@ Each episode demonstrates specific Swift features:
 4. **Episode 4 (Xcode 26 & Swift 6.2)**: Comprehensive Swift 6.2 feature playground with all implemented proposals
 
 ### Common Patterns
-- SwiftUI-based demo apps with ContentView
-- Demonstration of cutting-edge Swift features
-- Examples of ~Copyable and ~Escapable types
-- Swift Evolution proposal implementations
+- SwiftUI-based demo apps with ContentView as main interface
+- Demonstration of cutting-edge Swift features with practical examples
+- Examples of ~Copyable and ~Escapable types showcasing memory management
+- Swift Evolution proposal implementations with direct links to proposals
+- Playground-style code organization with separate files for different proposals (e.g., Episode 4 has dedicated folders like `0371-IsolatedDeinit/` and `0446-NonescapableTypes/`)
+- Interactive demos that execute Swift Evolution examples via `runPlaygroundOnAppear()` function
 
 ## Content Guidelines
 
@@ -64,3 +69,12 @@ Each episode demonstrates specific Swift features:
 
 - `.DS_Store` files are ignored via `.gitignore`
 - Cursor configuration and text scripts are excluded from version control
+- Repository follows feature branch workflow (current branch: `feature/ep4`)
+- Main branch is `main` for pull requests
+
+## Podcast Resources
+
+- README.md contains comprehensive episode listings with direct Swift Evolution proposal links
+- Images directory contains podcast branding assets
+- Each episode corresponds to specific Swift versions and Xcode releases
+- Links to podcast platforms: YouTube, Apple Podcasts, Spotify

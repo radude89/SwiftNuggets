@@ -26,14 +26,16 @@ class Person {
     }
 }
 
-func executeIsolatedDeinitPlayground() {
-    print("🛸 Start SE-0371 - Isolated Deinit Playground")
-    var person: Person? = Person()
-    if let person {
-        _ = Person(otherPerson: person)
+extension Playground {
+    static func runIsolatedDeinitExample() {
+        print("🛸 Start SE-0371 - Isolated Deinit Playground")
+        var person: Person? = Person()
+        if let person {
+            _ = Person(otherPerson: person)
+            // Calls deinit
+        }
+        person = nil
         // Calls deinit
+        print("🛸 Complete SE-0371 - Isolated Deinit Playground")
     }
-    person = nil
-    // Calls deinit
-    print("🛸 Complete SE-0371 - Isolated Deinit Playground")
 }
