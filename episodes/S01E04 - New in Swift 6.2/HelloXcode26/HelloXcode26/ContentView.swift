@@ -33,6 +33,9 @@ struct ContentView: View {
         
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0451-escaped-identifiers.md
         Playground.runRawIdentifiersExample()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0452-integer-generic-parameters.md
+        Playground.runIntegerGenericParametersExample()
     }
 }
 

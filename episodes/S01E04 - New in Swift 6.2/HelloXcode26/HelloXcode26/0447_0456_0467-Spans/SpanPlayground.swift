@@ -19,7 +19,8 @@ extension Playground {
         let rawSpan = span.bytes
         print("[Span] - RawSpan byteCount \(rawSpan.byteCount)") // 7 elements x 8 bytes = 56 bytes
         
-        // Not working with current Xcode 26 beta1 Swift toolchain
+        // 😿 Not working with current Xcode 26 beta1 Swift toolchain
+        //
         // let mutableSpan = numbers.mutableSpan
         //
         // for i in 0..<span.count {
