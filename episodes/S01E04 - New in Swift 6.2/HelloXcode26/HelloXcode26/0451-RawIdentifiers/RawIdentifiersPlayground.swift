@@ -14,12 +14,12 @@ extension Playground {
     }
     
     static func runRawIdentifiersExample() {
-        print("⚽️ Start SE-0451 - Raw Identifiers")
+        print("⚽️ Start SE-0451 - Raw Identifiers Playground")
         
         let lightGray = ColorShade.`50`
         print(lightGray)
         `when user logs in with valid credentials then success`()
         
-        print("⚽️ Complete SE-0451 - Raw Identifiers")
+        print("⚽️ Complete SE-0451 - Raw Identifiers Playground")
     }
 }

@@ -4,7 +4,6 @@ class Friend {
     var state = 0
 }
 
-@MainActor
 class Person {
     let friend: Friend
     let name = UUID().uuidString

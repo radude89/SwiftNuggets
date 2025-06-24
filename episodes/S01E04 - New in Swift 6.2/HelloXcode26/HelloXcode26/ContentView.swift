@@ -36,6 +36,9 @@ struct ContentView: View {
         
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0452-integer-generic-parameters.md
         Playground.runIntegerGenericParametersExample()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0453-vector.md
+        Playground.runInlineArrayPlayground()
     }
 }
 

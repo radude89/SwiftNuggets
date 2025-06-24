@@ -50,6 +50,9 @@ Each episode demonstrates specific Swift features:
 - Swift Evolution proposal implementations with direct links to proposals
 - Playground-style code organization with separate files for different proposals (e.g., Episode 4 has dedicated folders like `0371-IsolatedDeinit/` and `0446-NonescapableTypes/`)
 - Interactive demos that execute Swift Evolution examples via `runPlaygroundOnAppear()` function
+- Central `Playground` enum with extension-based organization for proposal demonstrations
+- Consistent emoji-based visual identification in console output for each proposal
+- Static method naming pattern: `run[ProposalName]Example()` or `run[ProposalName]Playground()`
 
 ## Content Guidelines
 
