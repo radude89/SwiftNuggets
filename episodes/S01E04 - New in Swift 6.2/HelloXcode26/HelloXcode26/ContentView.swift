@@ -13,7 +13,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Swift 6.2 - playground")
         }
         .padding()
         .onAppear(perform: runPlaygroundOnAppear)
