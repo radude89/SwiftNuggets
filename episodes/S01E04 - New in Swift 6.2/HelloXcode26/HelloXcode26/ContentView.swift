@@ -30,6 +30,9 @@ struct ContentView: View {
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0456-stdlib-span-properties.md
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0467-MutableSpan.md
         Playground.runSpanExample()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0451-escaped-identifiers.md
+        Playground.runRawIdentifiersExample()
     }
 }
 

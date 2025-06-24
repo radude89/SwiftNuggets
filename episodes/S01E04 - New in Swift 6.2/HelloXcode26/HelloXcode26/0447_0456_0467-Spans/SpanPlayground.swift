@@ -2,6 +2,8 @@ import Foundation
 
 extension Playground {
     static func runSpanExample() {
+        print("🚗 Start SE-0447, SE-0456 SE-0467 - Spans Playground")
+
         let numbers = [10, 20, 30, 40, 50, 60, 70]
         
         // Old way
@@ -26,6 +28,7 @@ extension Playground {
         //
         // End the exclusive access
         // _ = consume span
-        
+     
+        print("🚗 Complete SE-0447, SE-0456 SE-0467 - Spans Playground")
     }
 }
