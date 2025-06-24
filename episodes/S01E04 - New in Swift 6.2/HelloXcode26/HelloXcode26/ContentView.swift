@@ -39,6 +39,12 @@ struct ContentView: View {
         
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0453-vector.md
         Playground.runInlineArrayPlayground()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0457-duration-attosecond-represenation.md
+        Playground.runAttosecondsPlayground()
+
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0458-strict-memory-safety.md
+        Playground.runStrictMemoryPlayground()
     }
 }
 
