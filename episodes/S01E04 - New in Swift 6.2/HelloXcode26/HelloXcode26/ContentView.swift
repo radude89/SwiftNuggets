@@ -16,6 +16,12 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear(perform: runPlaygroundOnAppear)
+    }
+    
+    private func runPlaygroundOnAppear() {
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0371-isolated-synchronous-deinit.md
+        executeIsolatedDeinitPlayground()
     }
 }
 
