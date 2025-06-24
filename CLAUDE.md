@@ -12,6 +12,7 @@ Swift Nuggets is a podcast repository containing code examples and demonstration
   - Episode 1: Swift 6.1 features (Swift Package with Package.swift)
   - Episode 2: Swift 6.2 features (Xcode project with .xcodeproj)
   - Episode 3: Swift 6.2 part 2 (Xcode project with .xcodeproj)
+  - Episode 4: Swift 6.2 with Xcode 26 (Xcode project with .xcodeproj)
 - `images/` - Assets including podcast logo
 - `README.md` - Comprehensive episode listing with Swift Evolution proposal links
 
@@ -24,9 +25,10 @@ For episodes with Package.swift (like Episode 1):
 - Test: `swift test`
 
 ### Xcode Projects
-For episodes with .xcodeproj files (Episodes 2 & 3):
+For episodes with .xcodeproj files (Episodes 2, 3, & 4):
 - Build: `xcodebuild -project [ProjectName].xcodeproj -scheme [SchemeName] build`
 - Open in Xcode: `open [ProjectName].xcodeproj`
+- Example for Episode 4: `open "episodes/S01E04 - New in Swift 6.2/HelloXcode26/HelloXcode26.xcodeproj"`
 
 ## Code Architecture
 
@@ -36,6 +38,7 @@ Each episode demonstrates specific Swift features:
 1. **Episode 1 (Swift 6.1)**: Package traits, trailing commas, member import visibility, String.Index improvements, noncopyable types
 2. **Episode 2 (Swift 6.2)**: Nonescapable types, task priority escalation, completion handler sendability
 3. **Episode 3 (Swift 6.2 Part 2)**: Duration attosecond representation, isolated deinit, @dynamicMemberLookup enhancements
+4. **Episode 4 (Xcode 26 & Swift 6.2)**: Comprehensive Swift 6.2 feature playground with all implemented proposals
 
 ### Common Patterns
 - SwiftUI-based demo apps with ContentView
@@ -49,9 +52,15 @@ Each episode demonstrates specific Swift features:
 - Code samples must be compatible with discussed Swift versions
 - Each episode includes references to official Swift Evolution proposals
 - Examples demonstrate practical usage of new features
+- Follow established episode naming conventions from `.cursor/rules/general-rules.mdc`
 
 ## File Naming Conventions
 
 - Episodes: `SxxExx - Title/` format
-- Projects follow descriptive naming (e.g., `DemoSwift62`, `DemoSwift62-part2`)
+- Projects follow descriptive naming (e.g., `DemoSwift62`, `DemoSwift62-part2`, `HelloXcode26`)
 - Swift files use standard naming conventions
+
+## Git Configuration
+
+- `.DS_Store` files are ignored via `.gitignore`
+- Cursor configuration and text scripts are excluded from version control
