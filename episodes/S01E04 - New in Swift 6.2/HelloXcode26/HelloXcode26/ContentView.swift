@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  HelloXcode26
-//
-//  Created by Radu Dan on 24.06.2025.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -47,12 +40,9 @@ struct ContentView: View {
         Playground.runStrictMemoryPlayground()
         
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0461-async-function-isolation.md
-        Task {
-            await Playground.runNonIsolatedAsyncPlayground()
-        }
+        Playground.runNonIsolatedAsyncPlayground()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0462-task-priority-escalation-apis.md
+        Playground.runTaskPriorityEscalationPlayground()
     }
-}
-
-#Preview {
-    ContentView()
 }

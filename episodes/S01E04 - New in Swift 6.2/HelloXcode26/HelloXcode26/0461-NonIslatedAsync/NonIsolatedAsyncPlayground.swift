@@ -1,12 +1,14 @@
 import Foundation
 
 extension Playground {
-    static func runNonIsolatedAsyncPlayground() async {
+    static func runNonIsolatedAsyncPlayground() {
         print("🚴‍♂️ Start SE-0461 - Nonisolated async functions on the caller's actor by default Playground")
         
-        let anActor = MyActor()
-        await anActor.useObject()
-        await anActor.processData()
+        Task {
+            let anActor = MyActor()
+            await anActor.useObject()
+            await anActor.processData()
+        }
         
         print("🚴‍♂️ Complete SE-0461 - Nonisolated async functions on the caller's actor by default Playground")
     }
@@ -45,7 +47,7 @@ extension Playground {
         
         func processData() async {
             // This switches to background for network call
-            let data = await myClass.fetchData()
+            _ = await myClass.fetchData()
             
             // Then continues back on DataProcessor actor
         }

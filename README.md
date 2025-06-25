@@ -27,7 +27,7 @@ This repository contains links, code snippets, and resources featured in the "Sw
 
 ### 🗂️ Xcode versions
 
-- [Xcode 26 beta 1](https://developer.apple.com/documentation/xcode-release-notes/xcode-26-release-notes)
+- [Xcode 26 beta 2](https://developer.apple.com/documentation/xcode-release-notes/xcode-26-release-notes)
 - [Xcode 16.4](https://developer.apple.com/documentation/xcode-release-notes/xcode-16_4-release-notes)
 - [Xcode 16.3](https://developer.apple.com/documentation/xcode-release-notes/xcode-16_3-release-notes)
 - [Xcode 16.3 beta 1](https://developer.apple.com/documentation/xcode-release-notes/xcode-16_3-release-notes)
