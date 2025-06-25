@@ -4,13 +4,14 @@ extension Playground {
     static func runNonIsolatedAsyncPlayground() {
         print("🚴‍♂️ Start SE-0461 - Nonisolated async functions on the caller's actor by default Playground")
         
+        print("[Nonisolated] - Starting a background task...")
+        
         Task {
             let anActor = MyActor()
             await anActor.useObject()
             await anActor.processData()
+            print("🚴‍♂️ Complete SE-0461 - Nonisolated async functions on the caller's actor by default Playground")
         }
-        
-        print("🚴‍♂️ Complete SE-0461 - Nonisolated async functions on the caller's actor by default Playground")
     }
     
     private final class MyClass {

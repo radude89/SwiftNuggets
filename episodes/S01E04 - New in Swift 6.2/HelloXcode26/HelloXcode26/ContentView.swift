@@ -44,5 +44,8 @@ struct ContentView: View {
         
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0462-task-priority-escalation-apis.md
         Playground.runTaskPriorityEscalationPlayground()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0466-control-default-actor-isolation.md
+        Playground.runDefaultActorIsolationPlayground()
     }
 }

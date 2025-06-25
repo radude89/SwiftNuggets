@@ -27,6 +27,6 @@ extension Playground {
     private static func loadData() async {
         print("[Task Escalation] - Loading data...")
         try? await Task.sleep(for: .seconds(2))
-        print("[Task Escalation] - Completed ✅")
+        print("[Task Escalation] - Completed loading data ✅")
     }
 }
