@@ -8,8 +8,10 @@ extension Playground {
         let monitor = NotificationMonitor(notificationCenter: notificationCenter)
         monitor.createMultipleSubscribers()
         
-        Task {
+        Task(name: "Async Stream Continuation Task") {
             await wait(seconds: 1)
+            
+            print("[Async Stream] - Task's name: \(Task.name ?? "Unknown")")
             notificationCenter.broadcast("Broadcast important message! 👾")
             
             await wait(seconds: 1)
