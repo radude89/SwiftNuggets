@@ -45,6 +45,11 @@ struct ContentView: View {
 
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0458-strict-memory-safety.md
         Playground.runStrictMemoryPlayground()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0461-async-function-isolation.md
+        Task {
+            await Playground.runNonIsolatedAsyncPlayground()
+        }
     }
 }
 

@@ -19,16 +19,18 @@ extension Playground {
         let rawSpan = span.bytes
         print("[Span] - RawSpan byteCount \(rawSpan.byteCount)") // 7 elements x 8 bytes = 56 bytes
         
-        // 😿 Not working with current Xcode 26 beta1 Swift toolchain
-        //
-        // let mutableSpan = numbers.mutableSpan
-        //
-        // for i in 0..<span.count {
-        //    span[i] *= 2  // Direct mutation through span
-        // }
-        //
-        // End the exclusive access
-        // _ = consume span
+        // Mutable span
+        var bytes: [UInt8] = [1, 2, 3, 4, 5]
+        var data = Data(bytes)
+        var mutableSpan = data.mutableSpan
+
+        for i in 0..<mutableSpan.count {
+            mutableSpan[i] *= 2
+        }
+
+        _ = consume mutableSpan
+        bytes = Array(data)  // Convert back
+        print("[Span] - MutableSpan bytes \(bytes)")  // [2, 4, 6, 8, 10]
      
         print("🚗 Complete SE-0447, SE-0456 SE-0467 - Spans Playground")
     }
