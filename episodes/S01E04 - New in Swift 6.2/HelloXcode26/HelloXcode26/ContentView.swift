@@ -50,5 +50,8 @@ struct ContentView: View {
         
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0468-async-stream-continuation-hashable-conformance.md
         Playground.runAsyncStreamHashablePlayground()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0470-isolated-conformances.md
+        Playground.runGlobalActorIsolatedPlayground()
     }
 }
