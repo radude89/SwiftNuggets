@@ -9,10 +9,10 @@ struct ContentView: View {
             Text("Swift 6.2 - playground")
         }
         .padding()
-        .task { await runPlaygroundOnAppear() }
+        .onAppear(perform: runPlaygroundOnAppear)
     }
     
-    private func runPlaygroundOnAppear() async {
+    private func runPlaygroundOnAppear() {
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0371-isolated-synchronous-deinit.md
         Playground.runIsolatedDeinitExample()
         
