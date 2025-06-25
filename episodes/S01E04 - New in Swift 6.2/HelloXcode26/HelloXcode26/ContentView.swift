@@ -9,10 +9,10 @@ struct ContentView: View {
             Text("Swift 6.2 - playground")
         }
         .padding()
-        .onAppear(perform: runPlaygroundOnAppear)
+        .task { await runPlaygroundOnAppear() }
     }
     
-    private func runPlaygroundOnAppear() {
+    private func runPlaygroundOnAppear() async {
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0371-isolated-synchronous-deinit.md
         Playground.runIsolatedDeinitExample()
         
@@ -47,5 +47,8 @@ struct ContentView: View {
         
         // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0466-control-default-actor-isolation.md
         Playground.runDefaultActorIsolationPlayground()
+        
+        // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0468-async-stream-continuation-hashable-conformance.md
+        Playground.runAsyncStreamHashablePlayground()
     }
 }

@@ -9,7 +9,8 @@ extension Playground {
             await withTaskPriorityEscalationHandler {
                 await loadData()
                 print("[Task Escalation] - Escalated priority: \(Task.currentPriority)")
-                try? await Task.sleep(for: .seconds(3))
+                
+                await wait(seconds: 3)
                 print("🧩 Complete SE-0462 - Task Priority Escalation APIs Playground")
             } onPriorityEscalated: { oldPriority, newPriority in
                 print("[Task Escalation] - Old: \(oldPriority)")
@@ -26,7 +27,7 @@ extension Playground {
     
     private static func loadData() async {
         print("[Task Escalation] - Loading data...")
-        try? await Task.sleep(for: .seconds(2))
+        await wait(seconds: 2)
         print("[Task Escalation] - Completed loading data ✅")
     }
 }

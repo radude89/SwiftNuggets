@@ -18,7 +18,6 @@ extension Playground {
         print("[Default Actor Isolation] - Hello!")
     }
     
-    @MainActor
     private class UIController {
         var isLoading = false // Protected by MainActor
 
