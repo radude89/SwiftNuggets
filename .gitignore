@@ -9,6 +9,9 @@ xcuserdata/
 text-scripts/
 .cursor/
 
+## macOS
+.DS_Store
+
 ## Obj-C/Swift specific
 *.hmap
 
