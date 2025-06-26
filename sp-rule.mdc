@@ -1,0 +1,167 @@
+---
+description: Explains Swift proposals
+globs: 
+alwaysApply: false
+---
+Given an URL of a Swift Proposal, provide an explanation.
+
+Please include:
+- A clear and concise summary of the proposal's purpose and motivation
+- Key changes or features introduced by the proposal
+- Concrete Swift code examples that demonstrate how it works in practice
+- A brief explanation of any underlying concepts or theory, with extra detail if it helps improve clarity
+
+The explanation should be understandable to a Senior iOS Developer familiar with Swift, but not necessarily with the specific domain of the proposal.
+
+Example: 
+
+User asks:
+Can you explain to me the Swift proposal https://github.com/swiftlang/swift-evolution/blob/main/proposals/0467-MutableSpan.md?
+
+You should respond something like this:
+
+### Purpose & Motivation
+
+This proposal simplifies working with high-precision time measurements in Swift's `Duration` type by providing direct access to attosecond values using `Int128`.
+
+**Problem:**  
+The existing `Duration` API made precise time calculations unnecessarily complex, requiring developers to manually work with separate seconds and attoseconds components or use internal underscored properties.
+
+**Solution:**  
+Add direct `Int128`-based APIs for cleaner, more efficient duration arithmetic.
+
+---
+
+### Key Changes
+
+The proposal adds two simple APIs to `Duration`:
+
+```swift
+extension Duration {
+    /// The total duration in attoseconds as Int128
+    var attoseconds: Int128 { get }
+
+    /// Create a duration from attoseconds
+    init(attoseconds: Int128)
+}
+```
+
+---
+
+### Concrete Examples
+
+#### Random Duration Generation
+
+**Before (Complex):**
+```swift
+func randomDuration(upTo maxDuration: Duration) -> Duration {
+    let attosecondsPerSecond: Int128 = 1_000_000_000_000_000_000
+
+    let upperRange = Int128(maxDuration.components.seconds) * attosecondsPerSecond +
+                     Int128(maxDuration.components.attoseconds)
+
+    let randomAttoseconds = Int128.random(in: 0..<upperRange)
+    let (seconds, attoseconds) = randomAttoseconds
+        .quotientAndRemainder(dividingBy: attosecondsPerSecond)
+
+    return Duration(
+        secondsComponent: Int64(seconds),
+        attosecondsComponent: Int64(attoseconds)
+    )
+}
+```
+
+**After (Simple):**
+```swift
+func randomDuration(upTo maxDuration: Duration) -> Duration {
+    return Duration(attoseconds: Int128.random(in: 0..<maxDuration.attoseconds))
+}
+```
+
+---
+
+#### Duration Arithmetic
+
+**Before:**
+```swift
+func averageDuration(_ durations: [Duration]) -> Duration {
+    var totalAttoseconds: Int128 = 0
+
+    for duration in durations {
+        let components = duration.components
+        totalAttoseconds += Int128(components.seconds) * 1_000_000_000_000_000_000 +
+                            Int128(components.attoseconds)
+    }
+
+    let average = totalAttoseconds / Int128(durations.count)
+    let (seconds, attoseconds) = average
+        .quotientAndRemainder(dividingBy: 1_000_000_000_000_000_000)
+
+    return Duration(
+        secondsComponent: Int64(seconds),
+        attosecondsComponent: Int64(attoseconds)
+    )
+}
+```
+
+**After:**
+```swift
+func averageDuration(_ durations: [Duration]) -> Duration {
+    let totalAttoseconds = durations.reduce(0) { $0 + $1.attoseconds }
+    return Duration(attoseconds: totalAttoseconds / Int128(durations.count))
+}
+```
+
+---
+
+### High-Precision Timing
+
+```swift
+// Measuring sub-microsecond intervals
+let start = ContinuousClock.now
+performOperation()
+let end = ContinuousClock.now
+
+let duration = end - start
+let preciseAttoseconds = duration.attoseconds
+
+// Easy comparison and arithmetic
+if duration.attoseconds > threshold.attoseconds {
+    print("Operation took \(duration.attoseconds) attoseconds")
+}
+
+// Creating precise delays
+let preciseDelay = Duration(attoseconds: 1_500_000_000_000) // 1.5 milliseconds exactly
+try await Task.sleep(for: preciseDelay)
+```
+
+---
+
+### Understanding Attoseconds
+
+**Scale:** An attosecond is 10⁻¹⁸ seconds – incredibly small:
+
+- 1 second = 1,000,000,000,000,000,000 attoseconds  
+- 1 millisecond = 1,000,000,000,000,000 attoseconds  
+- 1 microsecond = 1,000,000,000,000 attoseconds  
+- 1 nanosecond = 1,000,000,000 attoseconds  
+
+**Why `Int128`?**  
+This provides enough range to represent:
+- Very small durations (single attoseconds)  
+- Very large durations (millions of years)  
+- Precise arithmetic without overflow
+
+---
+
+### Benefits
+
+- **Simplicity:** Direct access to total duration value eliminates complex component arithmetic  
+- **Performance:** No need to constantly convert between seconds/attoseconds components  
+- **Precision:** Full `Int128` precision maintained throughout calculations  
+- **Compatibility:** Additive API that doesn't break existing code  
+
+---
+
+This proposal makes `Duration` much more developer-friendly for scenarios requiring precise time measurements, like performance profiling, scientific calculations, or high-frequency operations.
+

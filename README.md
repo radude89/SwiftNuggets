@@ -18,6 +18,11 @@ This repository contains links, code snippets, and resources featured in the "Sw
 
 ## 🖇️ Resources
 
+### 🐙 Prompts
+
+- You can check CLAUDE.md for instructions for Claude Code.
+- There is a "sp-rule.mdc" file that you can import in Cursor to read proposals and provide you details and concrete example about it.
+
 ### ⚽️ Playgrounds
 
 - [📝 Episode #4 Playground](episodes/S01E04%20-%20New%20in%20Swift%206.2/)
